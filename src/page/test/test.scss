@@ -1,0 +1,9 @@
+.text {
+  padding: 10px;
+   &.green {
+     color: aqua;
+   }
+  &.red {
+    color: brown;
+  }
+}
