@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import TextComponent from "@/page/test/test";
+import {GuessingGame} from "@/page/game/guessingGame";
 
 export default function Home() {
 
@@ -10,6 +11,7 @@ export default function Home() {
       <div>Page组件</div>
         <div id="test"></div>
         <TextComponent words={words} value="miss miss"></TextComponent>
+        <GuessingGame></GuessingGame>
     </main>
   )
 }

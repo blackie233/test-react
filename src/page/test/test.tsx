@@ -23,6 +23,8 @@ export default function TextComponent({ value, words }:ITextParams) {
 
     const [likes, setLikes] = useState(0);
 
+    const [biubiuCount, setBiuBiuCount] = useState(0)
+
     const handleLike = (e:any) => {
 
         console.log('likelike')
@@ -49,22 +51,18 @@ export default function TextComponent({ value, words }:ITextParams) {
             {/*    // <span key={'like'+ index}>{like}</span>*/}
             {/*))}</div>*/}
             <div style={textCss as any} className={ `text ${likeColor}` }>Likes: {likes}</div>
-            <MyButton></MyButton>
-            <MyButton></MyButton>
+            <MyButton count={biubiuCount} onClick={() => {setBiuBiuCount(biubiuCount + 1)}} ></MyButton>
+            <MyButton count={biubiuCount} onClick={() => {setBiuBiuCount(biubiuCount + 1)}} ></MyButton>
+
         </div>
     )
 }
 
 
-function MyButton() {
-    const [count, setCount] = useState(0)
-
-    function handleClick() {
-        setCount(count + 1)
-    }
+function MyButton({ count, onClick }: { count: number, onClick: any }) {
 
     return (
-        <button onClick={ handleClick }>
+        <button onClick={ onClick }>
             biubiubiubiu鸡哔你{count}
         </button>
     )
