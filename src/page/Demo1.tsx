@@ -1,10 +1,41 @@
 'use client'
-import React from "react";
+import React, {useState} from "react";
+import {createRoot, Root} from "react-dom/client";
+import {GuessingGame} from "@/page/game/guessingGame";
+import {is} from "immutable";
 
 export default function Clock({color,time,dispaly}:any){
+    const [index,setIndex] = useState(0)
+    const [isSend,setIsSend] = useState(false)
+    const [message, setMessage] = useState('Hi!');
+    // @ts-ignore
+    // const root = createRoot(document.getElementById('root'));
+    // root.render(<GuessingGame></GuessingGame>)
+    function addIndex(){
+        setIndex(index+1)
+    }
+    if(isSend){
+        return <h1>hello</h1>
+    }
+
     return(
-        <h1 style={{color: color}}>
-            时间：{time}
-        </h1>
-    )
+        <div>
+            <button onClick={addIndex}> {index}</button>
+            <h1 style={{color: color}}>
+                时间：{time}
+            </h1>
+
+            <form onSubmit={(e)=>{
+                e.preventDefault()
+                setIsSend(true)
+            }}>
+                <textarea placeholder="index"
+                    value={index}
+                    onChange={e=>setMessage(e.target.value)}
+                >
+                </textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+       )
 }

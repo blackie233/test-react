@@ -16,8 +16,8 @@ export default function Home() {
       <div>Page组件</div>
         <div id="test"></div>
         <TextComponent words={words} value="miss miss"></TextComponent>
-        <Clock color={color} time={time.toTimeString()} display={true}></Clock>
         <GuessingGame></GuessingGame>
+        <Clock color={color} time={time.toTimeString()} display={true}></Clock>
     </main>
   )
 }
