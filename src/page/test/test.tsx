@@ -6,12 +6,12 @@ import { useState } from 'react';
 import './test.scss'
 
 const textCss = {
-    'font-weight': 'bold',
+    'fontWeight': 'bold',
 
 }
 
 export interface ITextParams{
-    value: string,
+    value?: string,
     words: Array<string>
 }
 

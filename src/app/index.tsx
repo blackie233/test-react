@@ -4,7 +4,7 @@ import Color = Property.Color;
 import Image from 'next/image'
 import TextComponent from "@/page/test/test";
 import {GuessingGame} from "@/page/game/guessingGame";
-
+//
 export default function Home() {
 
     const words = ['小轩窗', '正梳妆']
