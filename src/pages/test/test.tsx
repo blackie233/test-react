@@ -5,13 +5,13 @@ import { useState } from 'react';
 
 import './test.scss'
 
-// const textCss = {
-//     'font-weight': 'bold',
-//
-// }
+const textCss = {
+    'fontWeight': 'bold',
+
+}
 
 export interface ITextParams{
-    value: string,
+    value?: string,
     words: Array<string>
 }
 
@@ -51,7 +51,7 @@ export default function TextComponent({ value, words }:ITextParams) {
             {/*    like*/}
             {/*    // <span key={'like'+ index}>{like}</span>*/}
             {/*))}</div>*/}
-            {/*<div style={textCss as any} className={ `text ${likeColor}` }>Likes: {likes}</div>*/}
+            <div style={textCss as any} className={ `text ${likeColor}` }>Likes: {likes}</div>
             <MyButton count={biubiuCount} onClick={() => {setBiuBiuCount(biubiuCount + 1)}} ></MyButton>
             <MyButton count={biubiuCount} onClick={() => {setBiuBiuCount(biubiuCount + 1)}} ></MyButton>
 
