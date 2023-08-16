@@ -1,3 +1,7 @@
+$primary-color: blue;
+:export {
+  primaryColor: $primary-color
+}
 .text {
   padding: 10px;
    &.green {
