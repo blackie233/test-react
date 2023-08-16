@@ -1,8 +1,5 @@
 'use client'
 import React, {useState} from "react";
-import {createRoot, Root} from "react-dom/client";
-import {GuessingGame} from "@/page/game/guessingGame";
-import {is} from "immutable";
 
 export default function Clock({color,time,dispaly}:any){
     const [index,setIndex] = useState(0)
